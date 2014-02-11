@@ -24,7 +24,7 @@
 		<property name="configLocations">
 			<list>
 				<value>
-					classpath*:com/ydsn/web/controller/hibernate/hibernate.cfg.xml
+					classpath*:hibernate.cfg.xml
 				</value>
 			</list>
 		</property>

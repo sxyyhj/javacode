@@ -9,7 +9,7 @@
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
 	function del(id){
-		$.get("/springmvc12/user/deleteUser?id="+id,function(data){
+		$.get("/springmvc/user/deleteUser?id="+id,function(data){
 			if("success"==data.result){
 				alert("删除成功!");
 				window.location.reload();//刷新当前页面
@@ -33,7 +33,7 @@
 		<tr align="center">
 			<td>${u.userName}</td>
 			<td>${u.age}</td>
-			<td><a href="/springmvc12/user/getUser?id=${u.id}">编辑</a></td>
+			<td><a href="/springmvc/user/getUser?id=${u.id}">编辑</a></td>
 			<td><a href="javascript:del('${u.id}')">删除</a></td>
 		</tr>
 		</c:forEach>

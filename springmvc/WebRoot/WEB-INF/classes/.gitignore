@@ -3,3 +3,5 @@
 /springAnnotation-core.xml
 /springAnnotation-hibernate.xml
 /springAnnotation-servlet.xml
+/hibernate.cfg.xml
+/springAnnotation-import.xml

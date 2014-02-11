@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="userForm" action="/springmvc12/user/updateUser" method="post">
+<form name="userForm" action="/springmvc/user/updateUser" method="post">
 	<input type="hidden" name="id" value="${user.id}">
 	<table border="1" width="50%" align="center">
 		<tr>

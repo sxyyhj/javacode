@@ -3,5 +3,5 @@
 <!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
 ]>
 <beans>
-	<import resource="classpath*:com/ydsn/web/controller/spring/springAnnotation-import.xml" />
+	<import resource="classpath*:springAnnotation-import.xml" />
 </beans>

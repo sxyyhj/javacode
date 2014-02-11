@@ -10,7 +10,7 @@
 <script type="text/javascript">
 	function addUser(){
 		var form = document.forms[0];
-		form.action="/springmvc12/user/addUser";
+		form.action="/springmvc/user/addUser";
 		form.method="post";
 		form.submit();
 	}
