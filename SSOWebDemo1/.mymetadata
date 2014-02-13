@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SSOWebDemo1"
+  id="myeclipse.1349948203590"
+  context-root="/SSOWebDemo1"
+  j2ee-spec="5.0"
+  archive="SSOWebDemo1.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

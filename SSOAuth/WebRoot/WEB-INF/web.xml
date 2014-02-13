@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <servlet>
+        <servlet-name>SSOAuth</servlet-name>
+        <servlet-class>DesktopSSO.SSOAuth</servlet-class>
+        <init-param>
+            <param-name>domainname</param-name>
+            <param-value>192.168.0.102</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cookiename</param-name>
+            <param-value>DesktopSSOID</param-value>
+        </init-param>
+        </servlet>
+    <servlet-mapping>
+        <servlet-name>SSOAuth</servlet-name>
+        <url-pattern>/SSOAuth</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+	<welcome-file>
+            index.jsp
+        </welcome-file>
+    </welcome-file-list>
+</web-app>
