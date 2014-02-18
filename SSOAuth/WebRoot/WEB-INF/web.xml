@@ -5,7 +5,7 @@
         <servlet-class>DesktopSSO.SSOAuth</servlet-class>
         <init-param>
             <param-name>domainname</param-name>
-            <param-value>192.168.0.102</param-value>
+            <param-value>localhost</param-value>
         </init-param>
         <init-param>
             <param-name>cookiename</param-name>
