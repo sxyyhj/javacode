@@ -8,15 +8,21 @@
 <body>
 <form name="userForm" action="/springmvc/user/updateUser" method="post">
 	<input type="hidden" name="id" value="${user.id}">
-	<table border="1" width="50%" align="center">
+	<table border="1" width="30%" align="center">
 		<tr>
-			<td>姓名:</td>
+			<td>用户名称:</td>
 			<td>
 				<input type="text" name="userName" value="${user.userName}">
 			</td>
 		</tr>
 		<tr>
-			<td>年龄:</td>
+			<td>用户密码:</td>
+			<td>
+				<input type="password" name="userPwd" value="${user.userPwd}">
+			</td>
+		</tr>
+		<tr>
+			<td>用户年龄:</td>
 			<td>
 				<input type="text" name="age" value="${user.age}">
 			</td>

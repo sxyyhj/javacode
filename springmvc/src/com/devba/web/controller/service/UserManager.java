@@ -1,9 +1,10 @@
-package com.ydsn.web.controller.service;
+package com.devba.web.controller.service;
 
 import java.util.List;
 
-import com.ydsn.web.controller.dao.IUserDAO;
-import com.ydsn.web.controller.entity.User;
+import com.devba.web.controller.dao.IUserDAO;
+import com.devba.web.controller.entity.User;
+
 
 public class UserManager implements IUserManager {
 

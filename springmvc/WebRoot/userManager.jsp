@@ -23,8 +23,8 @@
 <body>
 	<table border="1" width="50%" align="center">
 		<tr align="center">
-			<th>姓名</th>
-			<th>年龄</th>
+			<th>用户名称</th>
+			<th>用户年龄</th>
 			<th>编辑</th>
 			<th>删除</th>
 		</tr>

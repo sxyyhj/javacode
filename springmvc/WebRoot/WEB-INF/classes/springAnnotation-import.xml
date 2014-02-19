@@ -4,11 +4,11 @@
 ]>
 
 <beans>
-	<bean id="userDao" class="com.ydsn.web.controller.dao.UserDAO">
+	<bean id="userDao" class="com.devba.web.controller.dao.UserDAO">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
-	<bean id="userManagerBase" class="com.ydsn.web.controller.service.UserManager">
+	<bean id="userManagerBase" class="com.devba.web.controller.service.UserManager">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	

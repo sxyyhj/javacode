@@ -1,4 +1,4 @@
-package com.ydsn.web.controller;
+package com.devba.web.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ydsn.web.controller.entity.User;
-import com.ydsn.web.controller.service.IUserManager;
+import com.devba.web.controller.entity.User;
+import com.devba.web.controller.service.IUserManager;
 
 @Controller
 @RequestMapping("/user")

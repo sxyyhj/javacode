@@ -19,8 +19,9 @@
 <body>
 	<h>添加用户</h>
 	<form name="userForm" action="">
-		姓名：<input type="text" name="userName">
-		年龄：<input type="text" name="age">
+		用户名称：<input type="text" name="userName">
+		用户密码：<input type="password" name="userPwd">
+		用户年龄：<input type="text" name="age">
 		<input type="button" value="添加" onclick="addUser()">
 	</form>
 </body>
