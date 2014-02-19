@@ -3,7 +3,7 @@ package com.devba.web.controller.service;
 import java.util.List;
 
 import com.devba.web.controller.dao.IUserDAO;
-import com.devba.web.controller.entity.User;
+import com.devba.web.controller.entity.UserInfo;
 
 
 public class UserManager implements IUserManager {
@@ -15,12 +15,12 @@ public class UserManager implements IUserManager {
 	}
 
 	@Override
-	public void addUser(User user) {
-		userDao.addUser(user);
+	public void addUser(UserInfo userInfo) {
+		userDao.addUser(userInfo);
 	}
 
 	@Override
-	public List<User> getAllUser() {
+	public List<UserInfo> getAllUser() {
 		return userDao.getAllUser();
 	}
 
@@ -30,13 +30,13 @@ public class UserManager implements IUserManager {
 	}
 
 	@Override
-	public User getUser(String id) {
+	public UserInfo getUser(String id) {
 		return userDao.getUser(id);
 	}
 
 	@Override
-	public boolean updateUser(User user) {
-		return userDao.updateUser(user);
+	public boolean updateUser(UserInfo userInfo) {
+		return userDao.updateUser(userInfo);
 	}
 
 }

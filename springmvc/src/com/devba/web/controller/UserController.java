@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.devba.web.controller.entity.User;
+import com.devba.web.controller.entity.UserInfo;
 import com.devba.web.controller.service.IUserManager;
 
 @Controller
@@ -27,16 +27,16 @@ public class UserController {
 	}
 	
 	@RequestMapping("/addUser")
-	public String addUser(User user){
-		userManager.addUser(user);
+	public String addUser(UserInfo userInfo){
+		userManager.addUser(userInfo);
 		//转发到显示用户页面
 		return "redirect:/user/getAllUser";
 	}
 	
 	@RequestMapping("/getAllUser")
 	public String getAllUser(HttpServletRequest request){
-		List<User> user = userManager.getAllUser();
-		request.setAttribute("user", user);
+		List<UserInfo> userInfo = userManager.getAllUser();
+		request.setAttribute("user", userInfo);
 		return "/userManager";
 	}
 	
@@ -58,16 +58,16 @@ public class UserController {
 	
 	@RequestMapping("/getUser")
 	public String getUser(String id,HttpServletRequest request){
-		User user = userManager.getUser(id);
-		request.setAttribute("user", user);
+		UserInfo userInfo = userManager.getUser(id);
+		request.setAttribute("user", userInfo);
 		return "/editUser";
 	}
 	
 	@RequestMapping("/updateUser")
-	public String updateUser(User user,HttpServletRequest request){
-		if(userManager.updateUser(user)){
-			user = userManager.getUser(user.getId());
-			request.setAttribute("user", user);
+	public String updateUser(UserInfo userInfo,HttpServletRequest request){
+		if(userManager.updateUser(userInfo)){
+			userInfo = userManager.getUser(userInfo.getId());
+			request.setAttribute("user", userInfo);
 			return "redirect:/user/getAllUser";
 		}else{
 			return "/error";

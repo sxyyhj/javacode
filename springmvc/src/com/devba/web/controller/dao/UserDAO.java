@@ -5,7 +5,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
-import com.devba.web.controller.entity.User;
+import com.devba.web.controller.entity.UserInfo;
 
 
 public class UserDAO implements IUserDAO {
@@ -17,41 +17,41 @@ public class UserDAO implements IUserDAO {
 	}
 
 	@Override
-	public void addUser(User user) {
-		sessionFactory.getCurrentSession().save(user);
+	public void addUser(UserInfo userInfo) {
+		sessionFactory.getCurrentSession().save(userInfo);
 	}
 
 	@Override
-	public List<User> getAllUser() {
-		String hql = "from User";
+	public List<UserInfo> getAllUser() {
+		String hql = "from UserInfo";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
 	}
 
 	@Override
 	public boolean deleteUser(String id) {
-		String hql = "delete User u where u.id=?";
+		String hql = "delete UserInfo u where u.id=?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setString(0, id);
 		return (query.executeUpdate() > 0);
 	}
 
 	@Override
-	public User getUser(String id) {
-		String hql = "from User u where u.id=?";
+	public UserInfo getUser(String id) {
+		String hql = "from UserInfo u where u.id=?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setString(0, id);
-		return (User) query.uniqueResult();
+		return (UserInfo) query.uniqueResult();
 	}
 
 	@Override
-	public boolean updateUser(User user) {
-		String hql = "update User u set u.userName=?,u.userPwd=?,u.age=? where u.id=?";
+	public boolean updateUser(UserInfo userInfo) {
+		String hql = "update UserInfo u set u.userName=?,u.userPwd=?,u.age=? where u.id=?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		query.setString(0, user.getUserName());
-		query.setString(1, user.getUserPwd());
-		query.setString(2, user.getAge());
-		query.setString(3, user.getId());
+		query.setString(0, userInfo.getUserName());
+		query.setString(1, userInfo.getUserPwd());
+		query.setString(2, userInfo.getAge());
+		query.setString(3, userInfo.getId());
 		return (query.executeUpdate()>0);
 	}
 
